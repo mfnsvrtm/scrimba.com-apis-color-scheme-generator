@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+select {
+    color: #111827;
+    line-height: 24px;
+}
+
+button {
+    color: #374151;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.color-value {
+    color: #2B283A;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    
+    min-height: 100vh;
+}
+
+.app {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    
+    width: 550px;
+    height: 550px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+    height: 90px;
+    padding-inline: 15px;
+}
+
+.header > * {
+    height: 42px;
+}
+
+select {
+    flex-grow: 1;
+}
+
+.color-picker {
+    border-radius: 6px;
+    border: none;
+    
+    border: 0.5px solid #D1D5DB;
+    background: #E5E5E5;
+    
+    width: 62px;
+}
+
+.mode-picker,
+.size-picker,
+.get-btn {
+    padding-inline: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #D1D5DB;
+    background: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+.size-picker {
+    width: 50px;
+    text-align: center;
+}
+
+.size-picker.error {
+    border: 1px solid red;
+}
+
+.size-picker {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+
+.size-picker::-webkit-outer-spin-button,
+.size-picker::-webkit-inner-spin-button {
+	display: none;
+}
+
+div.error {
+    display: none;
+    
+    position: absolute;
+    top: calc(100% / 2);
+    padding: 30px;
+
+    place-content: center; 
+
+    transform: translateY(-50%);    
+    
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+    
+    background-color: white;
+    color: rgba(255, 0, 0, 0.75);
+}
+
+div.error.visible {
+    display: grid;
+}
+
+.display {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+}
+
+.color-preview,
+.color-value {
+    cursor: pointer;
+}
+
+.color-preview {
+    height: 100%;
+}
+
+.color-value {
+    display: grid;
+    place-items: center;
+    
+    padding: 10px 28px;
+}
+
+.copy-popup {
+    display: none;
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 5px;
+    
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9)
+}
